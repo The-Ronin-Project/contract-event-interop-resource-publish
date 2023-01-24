@@ -1,0 +1,29 @@
+{
+  "$id": "https://github.com/projectronin/ronin-contract-interop-resource-publish/blob/main/v1/interop-resource-publish-v1.schema.json",
+  "title": "Interop Resource Publish",
+  "description": "This event represents the Resource as transformed and published by the interops platform.",
+  "type": "object",
+  "properties": {
+    "tenantId": {
+      "description": "The ID of the tenant for which the resource was published",
+      "type": "string"
+    },
+    "resourceType": {
+      "description": "The type of FHIR Resource, i.e. 'Patient'",
+      "type": "string"
+    },
+    "dataTrigger": {
+      "description": "The data trigger context, i.e. 'Nightly'",
+      "type": "string"
+    },
+    "resourceJson": {
+      "description": "The JSON string representation of the FHIR resource that was published.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "tenantId",
+    "resourceType",
+    "resourceJson"
+  ]
+}
