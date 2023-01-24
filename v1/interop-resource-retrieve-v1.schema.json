@@ -14,7 +14,8 @@
     },
     "dataTrigger": {
       "description": "The data trigger context, i.e. 'Nightly'",
-      "type": "string"
+      "type": "string",
+      "enum": ["adhoc", "nightly", "backfill"]
     },
     "resourceJson": {
       "description": "The JSON string representation of the FHIR resource that was published.",
